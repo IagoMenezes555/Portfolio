@@ -31,9 +31,13 @@ header h1 {
 header h1:hover {
   font-size: 35px;
 }
-header .pages {
+header .princ {
   margin-left: auto;
-  margin-right: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+header .pages {
   display: flex;
   gap: 20px;
 }
@@ -46,6 +50,24 @@ header .pages a {
   transition: 700ms;
 }
 header .pages a:hover {
+  -webkit-text-decoration: underline 5px #6a0499;
+          text-decoration: underline 5px #6a0499;
+  color: #8a01ca;
+}
+header .pages2 {
+  margin-right: 100px;
+  display: flex;
+  gap: 20px;
+}
+header .pages2 a {
+  line-height: 1;
+  text-decoration: none;
+  color: white;
+  text-decoration-color: #950bd4;
+  text-shadow: black 2px 2px;
+  transition: 700ms;
+}
+header .pages2 a:hover {
   -webkit-text-decoration: underline 5px #6a0499;
           text-decoration: underline 5px #6a0499;
   color: #8a01ca;
@@ -107,4 +129,47 @@ footer {
 
 abbr {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
+    max-height: 150px;
+  }
+  header h1 {
+    margin-left: 0px;
+  }
+  header .princ {
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  header .pages {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  header .pages a:hover {
+    text-decoration: none;
+  }
+  header .pages2 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  header .pages2 a:hover {
+    text-decoration: none;
+  }
+  main {
+    flex-direction: column;
+    margin-top: 50px;
+  }
+  main .content {
+    max-width: 350px;
+    text-align: center;
+  }
+  main .socialMedia {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
