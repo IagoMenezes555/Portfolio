@@ -32,9 +32,14 @@ header{
     font-size: 35px;
   }
 
-  .pages{
+  .princ{
     margin-left: auto;
-    margin-right: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pages{
     display: flex;
     gap: 20px;
 
@@ -50,6 +55,24 @@ header{
       text-decoration: underline 5px #6a0499;
       color: #8a01ca;
     }
+  }
+
+  .pages2{
+      margin-right: 100px;
+      display: flex;
+      gap: 20px;
+      a{
+        line-height: 1;
+        text-decoration: none;
+        color: white;
+        text-decoration-color: #950bd4;
+        text-shadow: black 2px 2px;
+        transition: 700ms;
+      }
+      a:hover{
+        text-decoration: underline 5px #6a0499;
+        color: #8a01ca;
+      }
   }
 }
 
@@ -113,4 +136,52 @@ footer{
 
 abbr{
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  header{
+    flex-direction: column;
+    max-height: 150px;
+    h1{
+      margin-left: 0px;
+    }
+
+    .princ{
+      margin-left: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .pages{
+      margin-left: 0px;
+      margin-right: 0px;
+      a:hover{
+        text-decoration: none;
+      }
+    }
+    .pages2{
+      margin-left: 0px;
+      margin-right: 0px;
+    a:hover{
+      text-decoration: none;
+      }
+    }
+  }
+
+  main{
+    flex-direction: column;
+    margin-top: 50px;
+  
+    .content{
+      max-width: 350px;
+      text-align: center;
+    }
+  
+    .socialMedia{
+      justify-content: center;
+    }
+  }
 }
